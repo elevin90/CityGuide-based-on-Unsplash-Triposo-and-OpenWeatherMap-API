@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18F203" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ParentEntity" representedClassName="ParentEntity" isAbstract="YES" syncable="YES" codeGenerationType="class"/>
+    <entity name="SavedAttraction" representedClassName="SavedAttraction" parentEntity="ParentEntity" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longtitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="raiting" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedCountry" inverseName="attractions" inverseEntity="SavedCountry" syncable="YES"/>
+    </entity>
+    <entity name="SavedCountry" representedClassName="SavedCountry" parentEntity="ParentEntity" syncable="YES">
+        <attribute name="capital" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attractions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedAttraction" inverseName="country" inverseEntity="SavedAttraction" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SavedRegion" inverseName="countries" inverseEntity="SavedRegion" syncable="YES"/>
+    </entity>
+    <entity name="SavedRegion" representedClassName="SavedRegion" parentEntity="ParentEntity" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedCountry" inverseName="country" inverseEntity="SavedCountry" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ParentEntity" positionX="286.953125" positionY="-208.421875" width="128" height="43"/>
+        <element name="SavedCountry" positionX="378.015625" positionY="16.9609375" width="128" height="103"/>
+        <element name="SavedRegion" positionX="569.49609375" positionY="-130.30859375" width="128" height="103"/>
+        <element name="SavedAttraction" positionX="140.72265625" positionY="72.3671875" width="128" height="118"/>
+    </elements>
+</model>

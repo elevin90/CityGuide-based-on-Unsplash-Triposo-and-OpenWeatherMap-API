@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RegionHeaderView" customModule="CityGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dxm-J7-4gE">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6i-Qm-Rk1">
+                    <rect key="frame" x="14" y="14" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.96469682459999995" green="0.96469980479999995" blue="0.9647062421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dxm-J7-4gE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Tr-ti-acS"/>
+                <constraint firstAttribute="trailing" secondItem="Dxm-J7-4gE" secondAttribute="trailing" id="7Kc-Tp-9gI"/>
+                <constraint firstItem="Y6i-Qm-Rk1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="FVL-LD-Q2c"/>
+                <constraint firstAttribute="bottom" secondItem="Dxm-J7-4gE" secondAttribute="bottom" id="Fu5-Lv-DLa"/>
+                <constraint firstItem="Y6i-Qm-Rk1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="iDX-ol-rnM"/>
+                <constraint firstItem="Dxm-J7-4gE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u4l-q6-Wtn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="regionImage" destination="Dxm-J7-4gE" id="3CR-wd-uf1"/>
+                <outlet property="regionTitleLabel" destination="Y6i-Qm-Rk1" id="NZc-Zc-CY5"/>
+            </connections>
+        </view>
+    </objects>
+</document>
